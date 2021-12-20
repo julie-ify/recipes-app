@@ -3,6 +3,10 @@ class FoodsController < ApplicationController
   before_action :set_food, only: %i[show destroy]
 
   def index
+    @foods = current_user.foods
+  end
+
+  def new
     @food = Food.new
   end
 
