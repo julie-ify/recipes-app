@@ -1,2 +1,27 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<div class="is-flex is-justify-content-end mb-4">
+  <%= link_to 'Add Food', new_food_path, class: "button is-primary is-pulled-left mt-2 mr-5" %>
+</div>
+
+<div class="table-container">
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th title="measurement">Measurement unit</th>
+        <th title="price">Unit price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+          <th><%= food.name %></th>
+          <td><%= food.measurement_unit %></td>
+          <td>$<%= food.price %></td>
+          <td><%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-small is-danger is-light" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
