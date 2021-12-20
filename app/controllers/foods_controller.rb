@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   load_and_authorize_resource
-  before_action :set_food, only: [:show, :destroy]
-  
+  before_action :set_food, only: %i[show destroy]
+
   def index
     @food = Food.new
   end
