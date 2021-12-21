@@ -1,7 +1,7 @@
 <div>
   <ul>
     <% @recipes.each do |r| %>
-    <li class="border border-3 border-dark container mt-5 p-2 bio">
+    <li class="box container mt-5 p-2 bio">
       <div class= "mt-2" >
         <div >
           <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
