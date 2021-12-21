@@ -14,7 +14,15 @@
  *= require_self
  */
 
+<<<<<<< Updated upstream
 body {
   margin: 0;
   padding: 0;
+=======
+.msg {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+>>>>>>> Stashed changes
 }
