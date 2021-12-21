@@ -1,2 +1,22 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<div>
+<ul class="nav justify-content-center bg-light text-white">
+  <li class="nav-item">
+    <%= link_to "Create Recipe", new_recipe_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+     <%= link_to "My Recipes", recipes_path,  class: "nav-link" %>
+  </li>
+</ul>
+  <ul>
+    <% @recipes.each do |r| %>
+      <li>
+        <div class="border border-3 border-dark container mt-5 p-2 bio">
+          <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
+          <h4><%= r.name%></h4>
+          <% end %>
+          <p><%= r.description%></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
