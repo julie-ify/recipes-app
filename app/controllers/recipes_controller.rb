@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
   def index
     @recipes = Recipe.all
   end
@@ -25,9 +26,21 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    previous_url = request.env['HTTP_REFERER']
+    @recipe = Recipe.find(params[:id])
+
+    if @recipe.destroy
+      flash[:notice] = 'Recipe Deleted successfully!'
+    else
+      flash[:alert] = 'Unable to delete Recipe Try again later'
+    end
+    redirect_to(previous_url)
+  end
+
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description)
+    params.require(:recipe).permit(:name, :description, :public, :preparation_time, :cooking_time)
   end
 end
