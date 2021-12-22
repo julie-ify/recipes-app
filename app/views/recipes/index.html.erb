@@ -1,7 +1,8 @@
 <div>
   <ul>
+    <% if @recipes.size > 0%>
     <% @recipes.each do |r| %>
-    <li class="border border-3 border-dark container mt-5 p-2 bio">
+    <li class="border border-2 container mt-5 p-2 bio px-5">
       <div class= "mt-2" >
         <div >
           <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
@@ -18,6 +19,9 @@
         </div>
       </div>
     </li>
+    <% end %>
+    <% else %>
+    <p class="border border-2 container mt-5 p-2 bio px-5 fs-1">There are no recipes yet!!</p>
     <% end %>
   </ul>
 </div>
