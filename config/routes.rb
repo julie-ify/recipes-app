@@ -20,6 +20,5 @@ Rails.application.routes.draw do
     end 
   end
 
-  get 'shopping_list', to: 'foods#index'
-  resources :shopping_list
+  get 'shopping_list', to: 'shopping_list#index'
 end
