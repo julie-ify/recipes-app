@@ -4,8 +4,7 @@
       <div class="navbar-start">
         <%= link_to "Food", foods_path, class: "navbar-item #{current_page?(foods_path) ? "is-active" : ""}" %>
         <%= link_to "My Recipes", recipes_path, class: "navbar-item #{current_page?(recipes_path) ? "is-active" : ""}" %>
-        <%= link_to "Create Recipe", new_recipe_path, class: "navbar-item" %>
-        <%= link_to "Public Recipe", public_recipes_path, class: "navbar-item" %>
+        <%= link_to "Public Recipes", public_recipes_path, class: "navbar-item" %>
         <%= link_to "Shopping List", shopping_list_path, class: "navbar-item #{current_page?(shopping_list_path) ? "is-active" : ""}" %>
       </div>
       <div class="navbar-end">
