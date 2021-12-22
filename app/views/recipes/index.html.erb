@@ -1,5 +1,6 @@
 <div>
   <ul>
+    <% if @recipes.size > 0%>
     <% @recipes.each do |r| %>
     <li class="box container mt-5 p-2 bio">
       <div class= "mt-2" >
@@ -18,6 +19,9 @@
         </div>
       </div>
     </li>
+    <% end %>
+    <% else %>
+    <p class="border border-2 container mt-5 p-2 bio px-5 fs-1">There are no recipes yet!!</p>
     <% end %>
   </ul>
 </div>

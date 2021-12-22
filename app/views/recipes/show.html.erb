@@ -22,11 +22,13 @@
       <h5> Cooking time: <%= @recipe.preparation_time %> min </h5>
       <h5> Steps go here...</h5>
     </div>
-    <div class="buttons">
+    <div class="buttons d-flex justify-content-between">
 			<button id="open-modal" class="button is-success is-small">Generate shopping list</button>
-			<% if can? :update, @recipe %>
-				<%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: "button is-success is-small" %>
-			<% end %>
+      <div>
+        <% if can? :update, @recipe %>
+          <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: "button is-success is-small" %>
+        <% end %>
+      </div>
 		</div>
     <div class="column is-three-quarters">
 		<%= render partial: "recipe_foods/index", locals: { recipe_foods: @recipe.recipe_foods } %>

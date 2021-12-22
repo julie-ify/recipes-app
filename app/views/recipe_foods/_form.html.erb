@@ -1,5 +1,5 @@
 <%= form_with(model: recipe_food) do |form| %>
-  <div class="field container">
+  <div class="field container bio">
     <%= form.label :food, class: "label" %>
     <div class="select is-fullwidth">
       <%= form.select :food_id, @foods %>
