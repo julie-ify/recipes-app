@@ -11,6 +11,9 @@
         <div class="navbar-item">
           <div class="buttons">
             <span class="button is-static is-small"><%= current_user.name %></span>
+            <%# get the number of public recipes of a user %>
+            <span class="button is-static is-small">📢  <%= current_user.recipes.where(public: true).count %></span>
+            <span class="button is-static is-small">🔒  <%= current_user.recipes.where(public: false).count %></span>
             <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-small is-danger is-light" %>
           </div>
         </div>
