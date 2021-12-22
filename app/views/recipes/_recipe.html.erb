@@ -1,4 +1,4 @@
-<div class="fs-4 p-3 border border-1 container my-2 p-2 bio">
+<div class="fs-4 p-3 border container mb-2 bio">
   <%= form_with model: @recipe, method: :post, local: true do |f| %>
     <%= f.label :name, "Name", class: "form-label fs-6" %>
     <%= f.text_field :name, required: true, class: "form-control mb-2" %>
@@ -11,9 +11,10 @@
 
     <%= f.label :preparation_time, "Preparation time(mins)", class: "form-label fs-6" %>
     <%= f.text_field :preparation_time, class: "form-control mb-2" %>
-
-    <%= f.label :public, "Make it Public?", class: "form-label fs-6" %>
-    <%= f.check_box :public, class: "mb-2" %>
+    <div class="d-block">
+      <%= f.label :public, "Make it Public?", class: "form-label fs-6 me-3" %>
+      <%= f.check_box :public, class: "mb-2" %>
+    </div>
 
     <%= f.submit "Add Recipe", data: {disable_with: "Adding..."}, class: "btn btn-primary my-3" %>
   <% end %>
