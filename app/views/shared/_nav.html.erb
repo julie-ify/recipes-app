@@ -1,10 +1,11 @@
-<nav class="navbar mb-6 container" role="navigation" aria-label="main navigation">
+<nav class="navbar mb-5 px-5 bg-light" role="navigation" aria-label="main navigation">
   <% if user_signed_in? %>
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <%= link_to "Food", foods_path, class: "navbar-item #{current_page?(foods_path) ? "is-active" : ""}" %>
         <%= link_to "My Recipes", recipes_path, class: "navbar-item #{current_page?(recipes_path) ? "is-active" : ""}" %>
         <%= link_to "Create Recipe", new_recipe_path, class: "navbar-item" %>
+        <%= link_to "Public Recipe", public_recipes_path, class: "navbar-item" %>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
