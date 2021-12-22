@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food.destroy
+    @food.delete
     respond_to do |format|
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }
     end

@@ -4,13 +4,15 @@
       <div class="navbar-start">
         <%= link_to "Food", foods_path, class: "navbar-item #{current_page?(foods_path) ? "is-active" : ""}" %>
         <%= link_to "My Recipes", recipes_path, class: "navbar-item #{current_page?(recipes_path) ? "is-active" : ""}" %>
-        <%= link_to "Create Recipe", new_recipe_path, class: "navbar-item" %>
-        <%= link_to "Public Recipe", public_recipes_path, class: "navbar-item" %>
+        <%= link_to "Public Recipes", public_recipes_path, class: "navbar-item" %>
+        <%= link_to "Shopping List", general_shopping_list_path, class: "navbar-item #{current_page?(general_shopping_list_path) ? "is-active" : ""}" %>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <span class="button is-static is-small"><%= current_user.name %></span>
+            <span class="button is-static is-small">📢  <%= current_user.recipes.where(public: true).count %></span>
+            <span class="button is-static is-small">🔒  <%= current_user.recipes.where(public: false).count %></span>
             <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-small is-danger is-light" %>
           </div>
         </div>

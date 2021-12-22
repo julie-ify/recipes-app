@@ -20,5 +20,5 @@ Rails.application.routes.draw do
     end 
   end
 
-
+  get 'general_shopping_list', to: 'shopping_list#index'
 end
