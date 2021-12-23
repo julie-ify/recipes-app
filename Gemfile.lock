@@ -82,6 +82,12 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -127,6 +133,7 @@ GEM
     parser (3.0.3.2)
       ast (~> 2.4.1)
     pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
     public_suffix (4.0.6)
     puma (5.5.2)
       nio4r (~> 2.0)
@@ -271,6 +278,7 @@ DEPENDENCIES
   byebug
   cancancan
   capybara (>= 3.26)
+  database_cleaner
   devise
   factory_bot_rails
   jbuilder (~> 2.7)
@@ -291,7 +299,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 3.0.2p107
+   ruby 2.7.5p203
 
 BUNDLED WITH
    2.2.32

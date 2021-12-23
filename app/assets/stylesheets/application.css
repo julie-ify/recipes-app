@@ -25,3 +25,10 @@ body {
   display: flex;
   align-items: center;
 }
+
+.ds-flex {
+  display: flex;
+  column-gap: 7rem;
+  align-items: flex-start;
+  padding: 1.5rem 3rem;
+}
