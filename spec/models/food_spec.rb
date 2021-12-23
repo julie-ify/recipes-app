@@ -24,4 +24,14 @@ RSpec.describe Food, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe 'associations' do
+    it 'has many to recipe_foods' do
+      expect(Food.reflect_on_association(:recipe_foods).macro).to eq(:has_many)
+    end
+
+    it 'belongs to user' do
+      expect(Food.reflect_on_association(:user).macro).to eq(:belongs_to)
+    end
+  end
 end
