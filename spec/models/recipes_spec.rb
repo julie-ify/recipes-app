@@ -10,11 +10,11 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'cooking time?' do
-      expect((subject.cooking_time).to_i).to be_a(Integer)
+      expect(subject.cooking_time.to_i).to be_a(Integer)
     end
 
     it 'preparation time?' do
-      expect((subject.cooking_time).to_i).to be_a(Integer)
+      expect(subject.cooking_time.to_i).to be_a(Integer)
     end
 
     it 'description?' do
