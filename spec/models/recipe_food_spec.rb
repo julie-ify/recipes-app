@@ -14,4 +14,14 @@ RSpec.describe RecipeFood, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe 'associations' do
+    it 'belongs to recipe' do
+      expect(RecipeFood.reflect_on_association(:recipe).macro).to eq(:belongs_to)
+    end
+
+    it 'belongs to food' do
+      expect(RecipeFood.reflect_on_association(:food).macro).to eq(:belongs_to)
+    end
+  end
 end
