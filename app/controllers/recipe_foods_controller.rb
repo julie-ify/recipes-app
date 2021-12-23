@@ -7,6 +7,8 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = @recipe.recipe_foods.new
   end
 
+  def index; end
+
   def edit; end
 
   def create

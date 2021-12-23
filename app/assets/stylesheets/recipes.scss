@@ -4,8 +4,7 @@
 
 .split {
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
+  justify-content: space-between;
 }
 
 .size {

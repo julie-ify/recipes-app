@@ -1,10 +1,10 @@
 
-<div class="container box p-2 my-5 bio">
-  <div class="d-flex justify-content-between my-3">
+<div class="container box p-2 px-3 my-5 bio">
+  <div class="d-flex justify-content-center my-3">
     <h2><%= @recipe.name %></h2>
   </div>
   <div>
-    <div class="split" >
+    <div class="split pb-2" >
       <div>
         <h5> Preparation time: <%= @recipe.preparation_time %> min </h5>
       </div>
@@ -18,8 +18,8 @@
         <% end %>
       </div>
     </div>
-    <div>
-      <h5> Cooking time: <%= @recipe.preparation_time %> min </h5>
+    <div class="pb-4">
+      <h5 class="pb-2"> Cooking time: <%= @recipe.preparation_time %> min </h5>
       <h5> Steps go here...</h5>
     </div>
     <div class="buttons d-flex justify-content-between">
