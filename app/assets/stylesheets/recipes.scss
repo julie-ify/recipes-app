@@ -1,0 +1,16 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size {
+  width: 70%;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}

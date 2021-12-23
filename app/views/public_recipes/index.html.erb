@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="bio text-center">Public Recipes</h1>
+  <div>
+    <% if @recipes.size > 0 %>
+    <% @recipes.each do |recipe|%>
+      <div class="box container my-5 bio px-5 ds-flex">
+        <div>
+          <div>
+            <%= link_to recipe_path(recipe.id), id: "recipe_path#{recipe.id}" do %>
+            <h4><%= recipe.name%></h4>
+            <% end %>
+
+            <p class="mt-6">By: <%= User.find_by(id: recipe.user_id).name%></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p> Total food items: <%= recipe.foods.size %> </p>
+            <p class="mt-6"> Total price: $<%= recipe.total_price %> </p>
+          </div>
+        </div>
+      </div>
+    <%end%>
+    <% else %>
+    <p class="border border-2 container mt-5 p-2 bio px-5 fs-1">There are no public recipes yet!!</p>
+    <% end %>
+  </div>
+</div>
