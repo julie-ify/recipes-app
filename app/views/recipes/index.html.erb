@@ -6,12 +6,12 @@
     <% if @recipes.size > 0%>
     <% @recipes.each do |r| %>
     <li class="box container mt-5 p-2 bio">
-      <div class= "mt-2" >
+      <div class= "mt-2 ds-flex" >
         <div >
           <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
           <h4><%= r.name%></h4>
           <% end %>
-          <div class="mt-4" >
+          <div class="mt-6" >
             <% if can? :destroy, r %>
             <%= link_to "Delete", recipe_path(r.id), method: :delete, data: {disable_with: "Deleting..."}, class: "btn btn-danger mb-3"%>
             <% end %>
