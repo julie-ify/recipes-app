@@ -1,24 +1,20 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Group-Capstone
+# Group-Project
 
-> This is an API based webapp that displays movies and their titles. This is a single-page application(SPA) which contains the home page and comments modal pop-ups. Users can click the `thumbs up` icon to give a like to their favorite and post comments by clicking on the `comment` button in the modal.  
+> This is a ruby on rails application that allows users to create and manage recipes.
 
-# Demo Link
+<!-- # Demo Link
 
 Click [here](#) to view the website online.
 
-# Video Link 
-Click [here](#)
+# Video Link
+
+Click [here](#) -->
+
 # Screenshot
 
-Width - 1440px
-
-![Image of the desktop view](#)
-
-Width - 470px
-
-![Image of the mobile view](#)
+![Image of the desktop view](./img/1.png)
 
 # Getting Started
 
@@ -32,30 +28,38 @@ To get a local copy up and running follow these simple steps.
 
 - Run `rails s` to start a development server.
 
+# Testing
+
+`bundle exec rspec` will run all the tests.
+
+Also, you can run `bundle exec rspec spec/` to run specific tests.
+
+You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
+
 ## Errors
-If you encounter any errors, run the followinf commands.
+
+If you encounter any errors, run the following commands.
 
 - Run `rake db:drop db:create db:migrade` to drop, create and migrate a new database.
 
 - Run `rubocop && rubocop -A` to check for and fix code errors.
 
+# This project was built with
 
+- Ruby on Rails
 
-# This project was built with:
+- Postgressql
 
-Ruby on Rails
+- Bulma CSS Framework
 
-Postgressql
-
+- Bootstrap CSS Framework
 
 # 👤 Authors
-
 
 👤 **Daniel M. Matongo**
 
 - GitHub: [Daniel M. Matongo](https://github.com/mmatongo)
 - LinkedIn: [Daniel M. Matongo](https://linkedin.com/in/mmatongo)
-
 
 👤 **Juliana Ifionu**
 
@@ -73,8 +77,10 @@ Feel free to check the [issues page](https://github.com/mmatongo/recipes-app/iss
 Give a ⭐️ if you like this project!
 
 # Acknowledgement
+
 - Hat tip to anyone whose code was a source of inspiration.
 - A big thanks to [@microverseinc](https://github.com/microverseinc).
+
 # 📝 License
 
 This project is [MIT](./MIT.md) licensed.
